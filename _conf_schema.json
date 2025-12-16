@@ -1,0 +1,50 @@
+{
+  "account": {
+    "description": "哔咔账号邮箱（必需）",
+    "type": "string",
+    "hint": "用于登录哔咔漫画的账号邮箱",
+    "required": true
+  },
+  "password": {
+    "description": "哔咔密码（必需）",
+    "type": "string",
+    "hint": "用于登录哔咔漫画的密码",
+    "required": true
+  },
+  "proxy": {
+    "description": "代理服务器",
+    "type": "string",
+    "hint": "代理服务器地址，格式：http://proxy:port",
+    "default": ""
+  },
+  "secret_key": {
+    "description": "API密钥",
+    "type": "string",
+    "hint": "哔咔API密钥，默认使用内置密钥",
+    "default": "~d}$Q7$eIni=V)9\\\\RK/P.RM4;9[7|@/CA}b~OW!3?EV`:<>M7pddUBL5n|0/*Cn"
+  },
+  "download_settings": {
+    "description": "下载设置",
+    "type": "object",
+    "items": {
+      "concurrency": {
+        "description": "下载并发数",
+        "type": "int",
+        "hint": "同时下载的图片数量",
+        "default": 5
+      },
+      "timeout": {
+        "description": "下载超时时间",
+        "type": "int",
+        "hint": "单张图片下载超时时间（秒）",
+        "default": 30
+      },
+      "retry_count": {
+        "description": "重试次数",
+        "type": "int",
+        "hint": "下载失败时的重试次数",
+        "default": 3
+      }
+    }
+  }
+}
